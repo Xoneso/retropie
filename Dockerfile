@@ -10,6 +10,7 @@ RUN apt-get update \
     
 RUN cd /opt && \
   wget $CUDA_RUN && \
+  mv /opt/cuda_8.0.44_linux-run /opt/cuda_8.0.44_linux.run
   chmod +x *.run && \
   mkdir nvidia_installers && \
   ./cuda_8.0.44_linux.run -extract=`pwd`/nvidia_installers && \
