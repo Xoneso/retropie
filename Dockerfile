@@ -4,7 +4,7 @@ ENV CUDA_RUN http://developer.nvidia.com/compute/cuda/8.0/Prod/local_installers/
 
 RUN apt-get update \
     && apt-get upgrade -y \
-    && apt-get install -y --no-install-recommends build-essential module-init-tools ca-certificates git dialog sudo \
+    && apt-get install -y --no-install-recommends wget build-essential module-init-tools ca-certificates git dialog sudo \
     && useradd -d /home/pi -G sudo -m pi \
     && echo "pi ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/pi
     
